@@ -1,0 +1,14 @@
+.component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-secondary);
+    padding: 32px 48px;
+    border-radius: var(--border-radius);
+
+    h2 {
+        font-family: var(--font-primary);
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,60 @@
+.shorten-form {
+    button,
+    input {
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+    button {
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        padding: 16px 64px;
+        &.invalid {
+            animation: shake 0.3s;
+        }
+    }
+
+    input {
+        color: var(--text-color);
+        background-color: var(--color-background);
+        width: 100%;
+        padding: 20px 16px;
+
+        &::placeholder {
+            color: #262626;
+        }
+    }
+
+    .shortened {
+        /* animate appearance */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s, transform 0.3s;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+* {
+    --shake-intensity: 5px;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(var(--shake-intensity));
+    }
+    50% {
+        transform: translateX(calc(-1 * var(--shake-intensity)));
+    }
+    75% {
+        transform: translateX(var(--shake-intensity));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,13 @@
+.loading {
+    justify-content: space-around;
+    padding: 256px 0;
+
+    p {
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
